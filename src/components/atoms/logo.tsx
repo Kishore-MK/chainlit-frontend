@@ -1,20 +1,26 @@
-import { useContext } from 'react';
-import { useRecoilValue } from 'recoil';
+import logo from "../../assets/logo.svg"
 
-import { settingsState } from 'state/settings';
 
-import { ChainlitContext } from 'client-types/*';
+const commonBoxStyles = {
+  display:"flex",
+  alignItems:"center"
+  
+};
 
-interface Props {
-  width?: number;
-  style?: React.CSSProperties;
-}
+const imageStyles = {
+  marginRight:"10px",
+  
+};
 
-export const Logo = ({ style }: Props) => {
-  const { theme } = useRecoilValue(settingsState);
-  const apiClient = useContext(ChainlitContext);
+
+export const Logo = () => {
 
   return (
-    <img src={apiClient.getLogoEndpoint(theme)} alt="logo" style={style} />
+    <div style={{...commonBoxStyles}}>
+      
+      <img src={logo} alt="" width={50} style={{...imageStyles}}/>
+      <p>yamamah</p>
+
+    </div>
   );
 };

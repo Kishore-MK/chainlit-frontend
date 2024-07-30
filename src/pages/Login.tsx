@@ -74,7 +74,7 @@ export default function Login() {
       onOAuthSignIn={async (provider: string) => {
         window.location.href = apiClient.getOAuthEndpoint(provider);
       }}
-      renderLogo={<Logo style={{ maxWidth: '60%', maxHeight: '90px' }} />}
+      renderLogo={<Logo />}
     />
   );
 }
