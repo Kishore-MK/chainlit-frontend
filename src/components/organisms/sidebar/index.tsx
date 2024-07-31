@@ -78,7 +78,7 @@ const SideBar = () => {
             mt: 1
           }}
         >
-          <Logo style={{ maxHeight: '25px' }} />
+          <Logo />
         </Stack>
         {enableHistory ? (
           <ThreadHistory />

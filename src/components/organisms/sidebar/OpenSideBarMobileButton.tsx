@@ -1,26 +1,27 @@
-import { useSetRecoilState } from 'recoil';
+import logo from "../../../assets/logo.svg"
 
-import SortIcon from '@mui/icons-material/Sort';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
 
-import { settingsState } from 'state/settings';
+const commonBoxStyles = {
+  display:"flex",
+  alignItems:"center"
+  
+};
+
+const imageStyles = {
+  marginRight:"10px",
+  
+};
+
+
 
 const OpenSideBarMobileButton = () => {
-  const setSettings = useSetRecoilState(settingsState);
   return (
-    <Box>
-      <IconButton
-        onClick={() =>
-          setSettings((prev) => ({
-            ...prev,
-            isChatHistoryOpen: true
-          }))
-        }
-      >
-        <SortIcon />
-      </IconButton>
-    </Box>
+    <div style={{...commonBoxStyles}}>
+      
+      <img src={logo} alt="" width={40} style={{...imageStyles}}/>
+      <p>yamamah</p>
+
+    </div>
   );
 };
 
