@@ -93,36 +93,7 @@ const FeedbackButtons = ({ message }: Props) => {
 
     const baseButtons = [
       () => (
-        <Tooltip title="Helpful">
-          <span>
-            <IconButton
-              color="inherit"
-              disabled={disabled}
-              className={`positive-feedback-${feedback === 1 ? 'on' : 'off'}`}
-              onClick={() => {
-                handleFeedbackClick(1);
-              }}
-            >
-              <UpIcon sx={iconSx} />
-            </IconButton>
-          </span>
-        </Tooltip>
-      ),
-      () => (
-        <Tooltip title="Not helpful">
-          <span>
-            <IconButton
-              color="inherit"
-              disabled={disabled}
-              className={`negative-feedback-${feedback === -1 ? 'on' : 'off'}`}
-              onClick={() => {
-                handleFeedbackClick(0);
-              }}
-            >
-              <DownIcon sx={iconSx} />
-            </IconButton>
-          </span>
-        </Tooltip>
+        <></>
       )
     ];
 

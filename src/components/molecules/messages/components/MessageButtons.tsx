@@ -11,7 +11,6 @@ import { useIsDarkMode } from 'hooks/useIsDarkMode';
 import { type IStep } from 'client-types/';
 
 import { DebugButton } from './DebugButton';
-import { FeedbackButtons } from './FeedbackButtons';
 
 interface Props {
   message: IStep;
@@ -45,7 +44,7 @@ const MessageButtons = ({ message, run }: Props) => {
       color={isDark ? grey[400] : grey[600]}
     >
       {showCopyButton ? <ClipboardCopy value={message.output} /> : null}
-      {run ? <FeedbackButtons message={run} /> : null}
+      {run ? "" : null}
       {showDebugButton ? (
         <DebugButton debugUrl={config.debugUrl!} step={message} />
       ) : null}
