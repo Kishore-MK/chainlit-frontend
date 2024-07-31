@@ -94,6 +94,7 @@ const InputBox = memo(
       },
       [user, replyMessage]
     );
+   
 
     return (
       <Box
@@ -114,13 +115,14 @@ const InputBox = memo(
         {!autoScroll ? (
           <ScrollDownButton onClick={() => setAutoScroll(true)} />
         ) : null}
-        <Box>
+        <Box sx={{marginBottom:"15px"}}>
           <Input
             fileSpec={fileSpec}
             onFileUpload={onFileUpload}
             onFileUploadError={onFileUploadError}
             onSubmit={onSubmit}
             onReply={onReply}
+            
           />
           {/* {tokenCount > 0 && ( */}
           {/* <Stack flexDirection="row" alignItems="center">
