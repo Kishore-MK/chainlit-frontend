@@ -1,4 +1,5 @@
-import logo from "../../../assets/logo.svg"
+import { SvgIcon } from "@mui/material";
+import logo from "../../../assets/logo_light.svg"
 
 
 const commonBoxStyles = {
@@ -8,7 +9,8 @@ const commonBoxStyles = {
 };
 
 const imageStyles = {
-  marginRight:"10px",
+  marginLeft:"10px",
+  marginTop:"5px"
   
 };
 
@@ -17,9 +19,8 @@ const imageStyles = {
 const OpenSideBarMobileButton = () => {
   return (
     <div style={{...commonBoxStyles}}>
+      <img src={logo} alt="" width={170} style={{...imageStyles}}/>
       
-      <img src={logo} alt="" width={40} style={{...imageStyles}}/>
-      <p>yamamah</p>
 
     </div>
   );
