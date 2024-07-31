@@ -115,7 +115,7 @@ const InputBox = memo(
         {!autoScroll ? (
           <ScrollDownButton onClick={() => setAutoScroll(true)} />
         ) : null}
-        <Box sx={{marginBottom:"15px"}}>
+        <Box sx={{marginBottom:"25px"}}>
           <Input
             fileSpec={fileSpec}
             onFileUpload={onFileUpload}
